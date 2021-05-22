@@ -134,27 +134,31 @@ body {
   font-weight: 700;
 }
 
-.wrapper .container .form .body .form-container form label {
+.wrapper .container .form .body .form-container form div {
   position: relative;
   margin-bottom: 16px;
 }
 
-.wrapper .container .form .body .form-container form label img {
+.wrapper .container .form .body .form-container form div::after {
   display: none;
   position: absolute;
+  content: url("../images/icon-error.svg");
+  top: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 16px;
-  top: 8px;
 }
 
-.wrapper .container .form .body .form-container form label img.visible {
+.wrapper .container .form .body .form-container form div.error::after {
   display: block;
 }
 
-.wrapper .container .form .body .form-container form label .message {
-  display: none;
+.wrapper .container .form .body .form-container form div label {
+  position: relative;
 }
 
-.wrapper .container .form .body .form-container form label .message p {
+.wrapper .container .form .body .form-container form div label p.message {
+  display: none;
   color: var(--red);
   font-size: 0.6rem;
   font-weight: 400;
@@ -163,7 +167,7 @@ body {
   font-style: italic;
 }
 
-.wrapper .container .form .body .form-container form label .message.visible {
+.wrapper .container .form .body .form-container form div label p.message.visible {
   display: block;
 }
 

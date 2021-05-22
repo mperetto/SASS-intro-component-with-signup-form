@@ -106,33 +106,39 @@ body {
                             font-weight: 700;
                         }
                     }
-                    label {
+                    div {
                         position: relative;
                         margin-bottom: 16px;
-                        img {
+                        &::after {
                             display: none;
                             position: absolute;
+                            content: url('../images/icon-error.svg');
+                            top: 20px;
+                            transform: translateY(-50%);
                             right: 16px;
-                            top: 8px;
-                            &.visible {
+                        }
+                        &.error {
+                            &::after {
                                 display: block;
                             }
                         }
-                        .message {
-                            display: none;
-                            p {
+                        label {
+                            position: relative;
+                            p.message {
+                                display: none;
                                 color: var(--red);
                                 font-size: 0.6rem;
                                 font-weight: 400;
                                 padding-top: 5px;
                                 text-align: right;
                                 font-style: italic;
-                            }
-                            &.visible {
-                                display: block;
+                                &.visible {
+                                    display: block;
+                                }
                             }
                         }
                     }
+                    
                     input {
                         padding: 10px 30px 10px 30px;
                         border: 1px solid rgba(0, 0, 0, 0.2);
