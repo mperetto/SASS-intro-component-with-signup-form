@@ -1,0 +1,231 @@
+:root {
+  /*  Primary Colors  */
+  --red: #ff7a7a;
+  --green: #38cc8c;
+  /*  Accent Colors   */
+  --blue: #6055a5;
+  /*  Neutral Colors  */
+  --dark-blue: #3e3c49;
+  --graysh-blue: #b9b6d3;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+  background-color: var(--red);
+  background-image: url("../images/bg-intro-desktop.png");
+}
+
+.wrapper {
+  color: #fff;
+}
+
+.wrapper .container {
+  max-width: 800px;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+}
+
+.wrapper .container .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.wrapper .container .info .body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.wrapper .container .info .body h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.wrapper .container .info .body p {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.wrapper .container .form .body {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.wrapper .container .form .body .banner {
+  width: 100%;
+  padding: 16px 32px 16px 32px;
+  background: var(--blue);
+  margin-bottom: 16px;
+  border-radius: 7px;
+  -webkit-box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .container .form .body .banner h4 {
+  width: 100%;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 400;
+}
+
+.wrapper .container .form .body .banner h4 span {
+  font-weight: 600;
+}
+
+.wrapper .container .form .body .form-container form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #fff;
+  padding: 32px;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+}
+
+.wrapper .container .form .body .form-container form p {
+  color: var(--graysh-blue);
+  font-size: 0.5rem;
+  text-align: center;
+}
+
+.wrapper .container .form .body .form-container form p a {
+  text-decoration: none;
+  color: var(--red);
+  font-weight: 700;
+}
+
+.wrapper .container .form .body .form-container form label {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.wrapper .container .form .body .form-container form label img {
+  display: none;
+  position: absolute;
+  right: 16px;
+  top: 8px;
+}
+
+.wrapper .container .form .body .form-container form label img.visible {
+  display: block;
+}
+
+.wrapper .container .form .body .form-container form label .message {
+  display: none;
+}
+
+.wrapper .container .form .body .form-container form label .message p {
+  color: var(--red);
+  font-size: 0.6rem;
+  font-weight: 400;
+  padding-top: 5px;
+  text-align: right;
+  font-style: italic;
+}
+
+.wrapper .container .form .body .form-container form label .message.visible {
+  display: block;
+}
+
+.wrapper .container .form .body .form-container form input {
+  padding: 10px 30px 10px 30px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  outline: none;
+  width: 100%;
+}
+
+.wrapper .container .form .body .form-container form input:focus {
+  border-color: #000;
+}
+
+.wrapper .container .form .body .form-container form input.error {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.wrapper .container .form .body .form-container form button {
+  color: #fff;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border-radius: 3px;
+  border: transparent;
+  background: var(--green);
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  -webkit-box-shadow: 0px 5px 0px #2ea85d;
+          box-shadow: 0px 5px 0px #2ea85d;
+  margin-bottom: 16px;
+}
+
+.wrapper .container .form .body .form-container form button:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-image: url("../images/bg-intro-mobile.png");
+  }
+  .wrapper .container {
+    max-width: 400px;
+    -ms-grid-rows: (auto)[2];
+        grid-template-rows: repeat(2, auto);
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .wrapper .container .info {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .wrapper .container .info .body {
+    text-align: center;
+  }
+  .wrapper .container .info .body h1 {
+    font-size: 1.7rem;
+  }
+  .wrapper .container .form .body .banner h4 {
+    font-size: 1rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */

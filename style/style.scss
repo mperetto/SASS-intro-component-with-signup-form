@@ -1,0 +1,204 @@
+
+//  Primary Colors
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+
+//  Accent Colors
+$blue: hsl(248, 32%, 49%);
+
+//  Neutral Colors
+$dark-blue: hsl(249, 10%, 26%);
+$grayish-blue: hsl(246, 25%, 77%);
+
+:root {
+    /*  Primary Colors  */
+    --red: #{$red};
+    --green: #{$green};
+    /*  Accent Colors   */
+    --blue: #{$blue};
+    /*  Neutral Colors  */
+    --dark-blue: #{$dark-blue};
+    --graysh-blue: #{$grayish-blue};
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: var(--red);
+    background-image: url('../images/bg-intro-desktop.png');
+}
+
+.wrapper {
+    color: #fff;
+    .container {
+        max-width: 800px;
+        margin: auto;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+
+        .info {
+            display: flex;
+            align-items: center;
+            .body {
+                padding-left: 20px;
+                padding-right: 20px;
+                h1 {
+                    font-size: 2.5rem;
+                    margin-bottom: 20px;
+                }
+                p {
+                    font-size: 0.8rem;
+                    opacity: 0.9;
+                }
+            }
+        }
+
+        .form {
+            .body {
+                padding-left: 20px;
+                padding-right: 20px;
+                .banner {
+                    width: 100%;
+                    padding: 16px 32px 16px 32px;
+                    background: var(--blue);
+                    margin-bottom: 16px;
+                    border-radius: 7px;
+                    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+                    h4 {
+                        width: 100%;
+                        text-align: center;
+                        font-size: 0.7rem;
+                        font-weight: 400;
+                        span {
+                            font-weight: 600;
+                        }
+                    }
+                }
+
+                .form-container form {
+                    display: flex;
+                    flex-direction: column;
+                    background: #fff;
+                    padding: 32px;
+                    border-radius: 10px;
+                    box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+                    p {
+                        color: var(--graysh-blue);
+                        font-size: 0.5rem;
+                        text-align: center;
+                        a {
+                            text-decoration: none;
+                            color: var(--red);
+                            font-weight: 700;
+                        }
+                    }
+                    label {
+                        position: relative;
+                        margin-bottom: 16px;
+                        img {
+                            display: none;
+                            position: absolute;
+                            right: 16px;
+                            top: 8px;
+                            &.visible {
+                                display: block;
+                            }
+                        }
+                        .message {
+                            display: none;
+                            p {
+                                color: var(--red);
+                                font-size: 0.6rem;
+                                font-weight: 400;
+                                padding-top: 5px;
+                                text-align: right;
+                                font-style: italic;
+                            }
+                            &.visible {
+                                display: block;
+                            }
+                        }
+                    }
+                    input {
+                        padding: 10px 30px 10px 30px;
+                        border: 1px solid rgba(0, 0, 0, 0.2);
+                        border-radius: 3px;
+                        outline: none;
+                        width: 100%;
+                        &:focus {
+                            border-color: #000;
+                        }
+                        &.error {
+                            border-color: var(--red);
+                            color: var(--red);
+                        }
+                    }
+                    button {
+                        color: #fff;
+                        padding-top: 16px;
+                        padding-bottom: 16px;
+                        border-radius: 3px;
+                        border: transparent;
+                        background: var(--green);
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        font-weight: 500;
+                        box-shadow: 0px 5px 0px hsl(143, 57%, 42%);
+                        margin-bottom: 16px;
+                        &:hover {
+                            opacity: 0.7;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    body {
+        background-image: url('../images/bg-intro-mobile.png');
+    }
+
+    .wrapper {
+        .container {
+            max-width: 400px;
+            grid-template-rows: repeat(2, auto);
+            grid-template-columns: 1fr;
+            .info {
+                padding-top: 50px;
+                padding-bottom: 50px;
+                .body {
+                    text-align: center;
+                    h1 {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+            .form {
+                .body {
+                    .banner {
+                        h4 {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
