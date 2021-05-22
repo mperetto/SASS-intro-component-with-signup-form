@@ -122,19 +122,17 @@ body {
                                 display: block;
                             }
                         }
-                        label {
+                        label.message {
                             position: relative;
-                            p.message {
-                                display: none;
-                                color: var(--red);
-                                font-size: 0.6rem;
-                                font-weight: 400;
-                                padding-top: 5px;
-                                text-align: right;
-                                font-style: italic;
-                                &.visible {
-                                    display: block;
-                                }
+                            display: none;
+                            color: var(--red);
+                            font-size: 0.6rem;
+                            font-weight: 400;
+                            padding-top: 5px;
+                            text-align: right;
+                            font-style: italic;
+                            &.visible {
+                                display: block;
                             }
                         }
                     }

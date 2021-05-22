@@ -153,11 +153,8 @@ body {
   display: block;
 }
 
-.wrapper .container .form .body .form-container form div label {
+.wrapper .container .form .body .form-container form div label.message {
   position: relative;
-}
-
-.wrapper .container .form .body .form-container form div label p.message {
   display: none;
   color: var(--red);
   font-size: 0.6rem;
@@ -167,7 +164,7 @@ body {
   font-style: italic;
 }
 
-.wrapper .container .form .body .form-container form div label p.message.visible {
+.wrapper .container .form .body .form-container form div label.message.visible {
   display: block;
 }
 
