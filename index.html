@@ -35,34 +35,30 @@
 
           <div class="form-container">
             <form method="POST" action="index.html" id="sign-in-form">
-              <label for="name">
+              <div class="name">
                 <input type="text" name="input-name" placeholder="First Name" id="name">
-                <div class="message">
-                  <p>First Name cannot be empty.</p>
-                </div>
-                <img src="./images/icon-error.svg" class="" alt="">
-              </label>
-              <label for="surname">
+                <label for="name">
+                  <p class="message">First Name cannot be empty.</p>
+                </label>
+              </div>
+              <div class="surname">
                 <input type="text" name="input-surname" placeholder="Last Name" id="surname">
-                <div class="message">
-                  <p>Last Name cannot be empty.</p>
-                </div>
-                <img src="./images/icon-error.svg" class="" alt="">
-              </label>
-              <label for="email">
+                <label for="surname">
+                  <p class="message">Last Name cannot be empty.</p>
+                </label>
+              </div>
+              <div class="email">
                 <input type="email" name="input-email" placeholder="Email Address" id="email">
-                <div class="message">
-                  <p>Looks like this is not an email.</p>
-                </div>
-                <img src="./images/icon-error.svg" class="" alt="">
-              </label>
-              <label for="password">
+                <label for="email">
+                  <p class="message">Looks like this is not an email.</p>
+                </label>
+              </div>
+              <div class="password">
                 <input type="password" name="input-password" placeholder="Password" id="password">
-                <div class="message">
-                  <p>Password cannot be empty.</p>
-                </div>
-                <img src="./images/icon-error.svg" class="" alt="">
-              </label>
+                <label for="password">
+                  <p class="message">Password cannot be empty.</p>
+                </label>
+              </div>
               
               <button type="submit" name="btn-submit">Claim your free trial</button>
               <p>
